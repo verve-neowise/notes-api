@@ -1,0 +1,16 @@
+// Create note
+
+POST http://neowise.uz:416/notes
+Content-Type: application/json
+
+{
+    "image": "",
+    "name": "", 
+    "text": "", 
+    "likes": 12, 
+    "comments": 13
+}
+
+###
+
+GET http://neowise.uz:416/notes
