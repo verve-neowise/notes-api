@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync } from 'fs'
 
 export type Note = {
     id: number,
@@ -24,6 +24,8 @@ export function saveState() {
 }
 
 export function loadState() {
-    const text = readFileSync('./state.json').toString()
-    state = JSON.parse(text) 
+    if (existsSync('./state.json')) {
+        const text = readFileSync('./state.json').toString()
+        state = JSON.parse(text)     
+    }
 }
