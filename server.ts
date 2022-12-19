@@ -37,6 +37,42 @@ app.post('/notes', (req, res) => {
     })
 })
 
-app.listen(1416, () => console.log('Running...'))
+
+app.put('/notes/:id', (req, res) => {
+    
+    const id = +req.params.id
+    const { image, name, text, likes, comments } = req.body
+
+    const newNote: Note = {
+        id,
+        name,
+        image,
+        text,
+        likes,
+        comments
+    }
+    
+    state.notes = state.notes.map(note => note.id == id ? newNote : note)
+
+    saveState()
+
+    res.json({
+        message: "Note updated"
+    })
+})
+
+app.delete('/notes/:id', (req, res) => {
+    const id = +req.params.id
+
+    state.notes = state.notes.filter(note => note.id != id)
+
+    res.json({
+        message: "Note deleted."
+    })
+
+    saveState()
+})
+
+app.listen(416, () => console.log('Running...'))
 
 loadState()

@@ -1,16 +1,36 @@
+@url = http://localhost:416/notes
+# @url = http://neowise.uz:416/notes
+
 // Create note
 
-POST http://neowise.uz:416/notes
+POST {{url}}
 Content-Type: application/json
 
 {
-    "image": "",
-    "name": "", 
-    "text": "", 
+    "image": "dsfsdfsdf",
+    "name": "cxvcx", 
+    "text": "qweqweqweasdasdasd", 
+    "likes": 12, 
+    "comments": 13
+}
+
+### 
+
+PUT {{url}}/2
+Content-Type: application/json
+
+{
+    "image": "hello",
+    "name": "this-is name", 
+    "text": "qweqweqweasdasdasd", 
     "likes": 12, 
     "comments": 13
 }
 
 ###
 
-GET http://neowise.uz:416/notes
+GET {{url}}
+
+###
+
+DELETE {{url}}/1
