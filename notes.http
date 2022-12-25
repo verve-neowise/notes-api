@@ -34,3 +34,13 @@ GET {{url}}
 ###
 
 DELETE {{url}}/1
+
+
+###
+
+POST http://neowise.uz:1416/notes
+Content-Type: application/json
+
+{
+    "code": "12345"
+}
