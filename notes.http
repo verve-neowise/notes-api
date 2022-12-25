@@ -1,5 +1,5 @@
-@url = http://localhost:416/notes
-# @url = http://neowise.uz:416/notes
+# @url = http://localhost:416/notes
+@url = http://neowise.uz:1416/notes
 
 // Create note
 
@@ -7,11 +7,11 @@ POST {{url}}
 Content-Type: application/json
 
 {
-    "image": "dsfsdfsdf",
-    "name": "cxvcx", 
-    "text": "qweqweqweasdasdasd", 
-    "likes": 12, 
-    "comments": 13
+    "image": "https://teach-english.uz/wp-content/uploads/2022/01/learn-english-effectively.jpg",
+    "name": "Learn English", 
+    "text": "Teach English Abroad — Are you interested in working as an English language teacher around the world? UNI-Prep’s online TESOL & TEFL Certificate program qualifies an individual to work as an English and ESL/EFL teacher internationally.", 
+    "likes": 142, 
+    "comments": 90
 }
 
 ### 

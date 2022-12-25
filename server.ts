@@ -8,6 +8,14 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
+app.post('/sign', (req, res) => {
+    const { code } = req.body
+
+    res.json({
+        isCorrect: code == '54392'
+    })
+})
+
 app.get('/notes', (req, res) => {
     res.json({
         message: 'All Notes',
