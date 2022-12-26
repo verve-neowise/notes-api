@@ -16,6 +16,14 @@ app.post('/sign', (req, res) => {
     })
 })
 
+
+app.get('/notes/:id', (req, res) => {
+    res.json({
+        message: 'Note by id ' + req.params.id,
+        note: state.notes.find(note => note.id == +req.params.id)
+    })
+})
+
 app.get('/notes', (req, res) => {
     res.json({
         message: 'All Notes',
